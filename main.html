@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Самоуправление Tamos</title>
+    <link rel="stylesheet" href="styles.css">
+	<script src="https://kit.fontawesome.com/098b941111.js" crossorigin="anonymous"></script>
+	<link rel="icon" href="tamos.jpg">
+  </head>
+  <body>
+    
+    <main class="animate">
+      <h2>Голосуйте за Бекетаева Бексултана</h2>
+      <section>
+        <p>Голосуйте, чтобы получить следующие преимущества:</p>
+        <div class="container">
+          <div class="box">
+            <div class="item">
+              <div class="icon">
+                <a href="https://discord.gg/ydKsGRSCDq"><i class="fa-brands fa-discord"></a></i>
+              </div>
+              <span class="text">
+                Сервер в Discord, где вы можете оставлять жалобы на учителей и учеников, делиться идеями и получать последние новости
+              </span>
+            </div>
+            <div class="item">
+              <div class="icon">
+                <i class="fa fa-trophy"></i> 
+              </div>
+              <span class="text">
+                  Электронная система подачи заявок на олимпиады и кружки (будет полный сайт в будущем)
+              </span>
+            </div>
+            <div class="item">
+              <div class="icon">
+                <i class="fa fa-music"></i> 
+              </div>
+              <span class="text">
+                  Голосование за разную музыку вместо школьных звонков (и еще много других преимуществ)
+              </span>
+            </div>
+            <div class="item">
+              <div class="icon">
+                <i class="fa-solid fa-circle-question"></i>
+              </div>
+              <span class="text">
+                  Если у вас есть вопросы пишите в инстаграм ниже
+              </span>
+            </div>
+          </div>
+          <div class="icons">
+            <a href="https://www.instagram.com/bug2sick/"><i class="fa fa-instagram"></i></a>
+            <a href="https://discord.gg/ydKsGRSCDq"><i class="fa-brands fa-discord"></i></a>
+          </div>
+          <p style="text-align: center;" class="animate1">До дня выборов осталось:</p>
+          <div id="timer" class="animate1"></div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2023 Самоуправление Tamos Education. Виктор Юрьевич одобряет ✓.</p>
+    </footer>
+    <script>
+      var countDownDate = new Date("March 6, 2023 00:00:00").getTime();
+      
+      var x = setInterval(function() {
+      
+        var now = new Date().getTime();
+      
+        var distance = countDownDate - now;
+      
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      
+        document.getElementById("timer").innerHTML = days + " дней " + hours + " часов "
+        + minutes + " мин " + seconds + " сек";
+      
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("timer").innerHTML = "EXPIRED";
+        }
+      }, 1000);
+      </script>
+  </body>
+</html>
